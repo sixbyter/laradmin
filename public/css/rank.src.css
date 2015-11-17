@@ -1,0 +1,435 @@
+@CHARSET "UTF-8";
+#rank-bg-block {
+	background: url('http://meiriq-test.b0.upaiyun.com/public/BG_rank.png?20141008V1') no-repeat scroll 0 0;
+	z-index: 101;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+}
+#rank {
+	-webkit-transform: scale(0.55,0.55);
+	-moz-transform: scale(0.55,0.55);
+	-o-transform: scale(0.55,0.55);
+	-ms-transform: scale(0.55,0.55);
+	transform: scale(0.55,0.55);
+	margin-top: -110px;
+	border: 7px solid #d4aa75;
+	border-radius: 28px;
+	height: 726px;
+	width: 538px;
+	position: absolute;
+	left: 50%;
+	margin-left: -276px;
+	display: block;
+	z-index: 102;
+}
+
+#rank ul{
+	padding: 0;
+}
+
+@media only screen and (max-height:450px) {
+	/* iPhone 4,4s */
+	#rank,.sns {
+		-webkit-transform: scale(0.45,0.45);
+		-moz-transform: scale(0.45,0.45);
+		-o-transform: scale(0.45,0.45);
+		-ms-transform: scale(0.45,0.45);
+		transform: scale(0.45,0.45);
+		margin-top: -175px;
+	}
+}
+
+@media only screen and (min-height:451px) and (max-height:510px) {
+	/* iPhone 5,5s */
+	#rank,.sns {
+		-webkit-transform: scale(0.5,0.5);
+		-moz-transform: scale(0.5,0.5);
+		-o-transform: scale(0.5,0.5);
+		-ms-transform: scale(0.5,0.5);
+		transform: scale(0.5,0.5);
+		margin-top: -140px;
+	}
+}
+
+#rank .rank-main,.sns .sns-main {
+	height: 728px;
+	width: 538px;
+	float: left;
+	background: #f1dea1;
+	border-radius: 20px;
+	margin-top: -1px;
+}
+
+#rank .toggle-btn {
+	background: #fff;
+	border-radius: 35px;
+	height: 70px;
+	width: 424px;
+	margin: -35px 0 6px 56px;
+	float: left;
+}
+
+#rank .rank-tips {
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+	color: #a28056;
+}
+
+#rank .title {
+	display: inline-block;
+	float: left;
+	height: 58px;
+	/*width: 200px;*/
+	width: 412px;
+	/*cursor: pointer;*/
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 54px;
+	margin: 6px 4px 0 6px;
+	background: #f1dea1;
+	color: #d4aa75;
+}
+
+#rank .title[name='friend'] {
+	border-radius: 35px 0 0 35px;
+}
+
+#rank .title[name='global'] {
+	/*border-radius: 0 35px 35px 0;*/
+	border-radius: 35px;
+	background: #f90;
+	color: #fff;
+}
+
+#rank .title.title-active {
+	background: #f90;
+	color: #fff;
+}
+
+#rank #rank-list {
+	width: 100%;
+	height: 75%;
+	overflow: hidden;
+	position: absolute;
+	top: 80px;
+}
+
+#rank #scroller {
+	position: absolute;
+	width: 100%;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: auto;
+	-webkit-user-select: auto;
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	user-select: auto;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#rank .rank-list {
+	/*display: none;*/
+}
+
+#rank .rank-main ul,.sns .sns-main ul {
+	float: left;
+	height: 100%;
+	margin: 0 0 0 28px;
+/* 	overflow-y: scroll; */
+}
+
+#rank .rank-main ul li {
+	width: 479px;
+	margin: 0 0 10px;
+	float: left;
+	height: 110px;
+	color: #503e42;
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 12px;
+	border: 1px solid #cdbd89;
+	-webkit-transform: translate3d(0,0,0);
+	list-style:none;
+}
+
+.li-bg {
+	background: #fff6d8;
+	border-radius: 8px;
+	width: 477px;
+	margin: 0 0 10px;
+	float: left;
+}
+
+.li-bg .li-content {
+	width: 467px;
+	margin: 5px;
+	float: left;
+	height: 98px;
+	background: #e4c188;
+	border-radius: 5px;
+}
+
+#my-rank .li-bg .li-content {
+	background: #f60;
+	color: #fff;
+}
+
+.li-content .num {
+	float: left;
+	font-size: 32px;
+	height: 52px;
+	line-height: 52px;
+	margin: 25px 30px 0 26px;
+	text-align: center;
+	width: 40px;
+}
+
+#rank .rank-main ul li .top {
+	background: url('http://meiriq-test.b0.upaiyun.com/public/common.png?20141008V1') no-repeat scroll 0 0;
+	font-size: 0;
+}
+
+.li-content .top-1 {
+	background-position: 0 0!important;
+}
+
+.li-content .top-2 {
+	background-position: -40px 0!important;
+}
+
+.li-content .top-3 {
+	background-position: -80px 0!important;
+}
+
+.li-content .info {
+	float: left;
+	margin: 13px 0 0;
+}
+
+.li-content .info .face {
+	float: left;
+	height: 70px;
+	width: 70px;
+	border: 2px solid #fff;
+	margin-right: 15px;
+}
+
+.li-content .info .name {
+	float: left;
+	height: 70px;
+	width: 180px;
+	line-height: 70px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 28px;
+}
+
+.li-content .info .rank-value {
+	text-align: center;
+	float: left;
+	height: 70px;
+	width: 100px;
+	line-height: 70px;
+	font-size: 28px;
+}
+
+#rank .my-rank {
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+	color: #f60;
+	margin-top: 565px;
+	display: block;
+}
+
+#rank .home-btn {
+	background: url('http://meiriq-test.b0.upaiyun.com/public/common.png?20141008V1') no-repeat scroll -574px -396px;
+	width: 88px;
+	height: 88px;
+	cursor: pointer;
+	left: 50%;
+	margin-left: -200px;
+	position: absolute;
+	bottom: -45px;
+}
+
+#rank .home-btn:active {
+	bottom: -50px;
+}
+
+#rank .rank-btn,.sns .sns-btn {
+	background: #fff;
+	border-radius: 20px;
+	width: 260px;
+	height: 108px;
+	cursor: pointer;
+	left: 50%;
+	margin-left: -130px;
+	position: absolute;
+	bottom: -50px;
+}
+
+#rank .rank-btn:active,.sns .sns-btn:active {
+	bottom: -54px;
+}
+
+#rank .rank-btn .start-title,.sns .sns-btn .cancel-title {
+	background: #39b54a;
+	border-radius: 12px;
+	width: 246px;
+	height: 94px;
+	cursor: pointer;
+	position: absolute;
+	color: #fff;
+	font-size: 50px;
+	line-height: 94px;
+	text-align: center;
+	margin: 7px 0 0 7px;
+	left: 0px;
+}
+
+#rank .load-more {
+	cursor: pointer;
+	text-align: center;
+	font-size: 30px;
+	line-height: 75px;
+	height: 75px;
+}
+#meiriq {
+font-size: 22px;
+color: #369;
+position: absolute;
+left: 50%;
+bottom: -15%;
+margin-left: -100px;
+}
+
+.ad-w {
+  display: none;
+  background-color: rgba(50, 50, 50, 0.61);
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  opacity: 0.8;
+  z-index: 100;
+  text-align: left;
+}
+
+.ad-w div{
+position: static;
+}
+
+.ad-top-w {
+  top: 0;
+}
+
+.ad-bottom-w {
+  bottom: 0;
+}
+
+.ad-w .des {
+  float: left;
+  font-size: 12px;
+  padding-top: 15px;
+}
+
+.ad-w p.ad-title {
+  font-size: 16px;
+}
+
+.ad-w p {
+  line-height: 25px;
+  margin: 0px;
+}
+
+.ad-w img {
+  float: left;
+  margin: 15px 3% 15px 3%;
+}
+
+.ad-w span {
+  float: left;
+  font-size: 12px;
+  margin: 30px 0;
+}
+
+.ad-w span {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  width: 60px;
+  float: right;
+  line-height: 30px;
+  text-align: center;
+  margin: 25px 3% 0 3%;
+  text-decoration: none;
+  position: static;
+}
+
+.ad-w-f {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  z-index: 100;
+}
+
+.ad-top-w-f {
+  top: 0;
+}
+
+.ad-bottom-w-f {
+  bottom: 0;
+}
+#meiriq-share {
+display: none;
+}
+#meiriq-share #meiriq-share-mask{
+width: 100%;
+height: 100%;
+background:  #0F0F0F;
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 105;
+opacity: 0.6;
+}
+#meiriq-share #meiriq-share-image img{
+position: absolute;
+width: 100%;
+top: 0px;
+right: 0px;
+}
+
+#tips{
+position: absolute;
+width: 100%;
+height: 40px;
+line-height: 40px;
+text-align: center;
+background-color: #323232;
+color: #FFF;
+z-index: 101;
+opacity: 0.7;
+}
