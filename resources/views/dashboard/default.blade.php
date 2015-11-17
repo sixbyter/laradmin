@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="sixbyte">
 
-    <title>每日Q游戏-游戏库</title>
+    <title>Laradmin</title>
     <base href="{{ asset('templates/flatlab') }}/index.html">
 
     <!-- Bootstrap core CSS -->
@@ -36,7 +36,7 @@
                 <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
             </div>
             <!--logo start-->
-            <a href="{{ route('dashboard.welcome') }}" class="logo">每日<span>Q</span>游戏</a>
+            <a href="{{ route('dashboard.welcome') }}" class="logo">Lar<span>a</span>dmin</a>
             <!--logo end-->
             <div class="top-nav ">
                 <!--search & user info start-->
