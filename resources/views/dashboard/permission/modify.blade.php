@@ -27,9 +27,9 @@
                             <label for="pre_permission_id">父级权限</label>
                             <select class="form-control m-bot15" name="pre_permission_id">
                                 <option value="0">none</option>
-                                @foreach($permissions1 as $permission1)
+                                @foreach($permissions->where('pre_permission_id', 0) as $permission1)
                                 <option @if($selected_pre_permission_id === $permission1['id']) selected @endif value="{{ $permission1['id'] }}">{{ $permission1['readable_name'] }}</option>
-                                    @foreach($permission1->sons as $permission2)
+                                    @foreach($permissions->where('pre_permission_id', $permission1['id']) as $permission2)
                                         <option @if($selected_pre_permission_id === $permission2['id']) selected @endif value="{{ $permission2['id'] }}">--{{ $permission2['readable_name'] }}</option>
                                     @endforeach
                                 @endforeach

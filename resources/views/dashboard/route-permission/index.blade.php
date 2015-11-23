@@ -16,6 +16,7 @@
                   <th>唯一识别</th>
                   <th>名称</th>
                   <th>别名</th>
+                  <th>绑定权限</th>
                   <th>操作</th>
               </tr>
               </thead>
@@ -27,6 +28,7 @@
                   <td>{{ $route['route_key'] }}</td>
                   <td>{{ $route['name'] }}</td>
                   <td>{{ $route['readable_name'] }}</td>
+                  <td>{{ $route['permission']['readable_name'] }}</td>
                   <td>
                   <a type="button" href="{{ route('dashboard.route-permission.edit',$route['id']) }}" class="btn btn-warning btn-xs"><i class="icon-edit-sign "></i></a>
                   </td>
@@ -34,7 +36,7 @@
               @endforeach
               </tbody>
           </table>
-          <?php echo $routes->render();?>
+          <?php echo $routes->render(); ?>
       </section>
   </div>
 </div>

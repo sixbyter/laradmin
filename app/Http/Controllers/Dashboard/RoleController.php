@@ -53,7 +53,7 @@ class RoleController extends DashboardController
      */
     public function show($roleid)
     {
-        $role = Perchecker::getRoleModel()->with('permissions')->find($roleid);
+        $role = Perchecker::getRoleModel()->find($roleid);
         if (empty($role)) {
             abort(404);
         }

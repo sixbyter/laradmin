@@ -15,12 +15,10 @@ class PermissionController extends DashboardController
         $current_permission = Perchecker::getPermissionModel();
         $action             = route('dashboard.permission.store');
 
-        $permissions1 = Perchecker::getPermissionModel()
-            ->where('pre_permission_id', 0)
-            ->get();
+        $permissions = Perchecker::getAllPermissions();
 
         $selected_pre_permission_id = (int) old('pre_permission_id', $request->input('pre_permission_id', 0));
-        return view('dashboard.permission.modify', compact('action', 'current_permission', 'title', 'permissions1', 'selected_pre_permission_id'));
+        return view('dashboard.permission.modify', compact('action', 'current_permission', 'title', 'permissions', 'selected_pre_permission_id'));
     }
 
     public function destroy(Request $request, $permissionid)
@@ -42,19 +40,16 @@ class PermissionController extends DashboardController
         if (empty($current_permission)) {
             abort(404);
         }
-        $action       = route('dashboard.permission.update', $current_permission['id']);
-        $permissions1 = Perchecker::getPermissionModel()
-            ->where('pre_permission_id', 0)
-            ->get();
+        $action                     = route('dashboard.permission.update', $current_permission['id']);
+        $permissions                = Perchecker::getAllPermissions();
         $selected_pre_permission_id = (int) old('pre_permission_id', $current_permission['pre_permission_id']);
-        return view('dashboard.permission.modify', compact('action', 'current_permission', 'title', 'permissions1', 'selected_pre_permission_id'));
+        return view('dashboard.permission.modify', compact('action', 'current_permission', 'title', 'permissions', 'selected_pre_permission_id'));
     }
 
     public function index()
     {
-        $permissions1 = Perchecker::getPermissionModel()->where('pre_permission_id', 0)->get();
-
-        return view('dashboard.permission.index', compact('permissions1'));
+        $permissions = Perchecker::getAllPermissions();
+        return view('dashboard.permission.index', compact('permissions'));
     }
 
     public function store(Request $request)

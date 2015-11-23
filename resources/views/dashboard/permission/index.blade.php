@@ -10,7 +10,7 @@
             </header>
             <div class="panel-body">
                 <form class="form-horizontal tasi-form">
-                    @foreach($permissions1 as $permission1)
+                    @foreach($permissions->where('pre_permission_id', 0) as $permission1)
                     <div class="form-group">
                         <div class="checkbox">
                             <label>
@@ -26,7 +26,7 @@
                             </label>
                         </div>
                     </div>
-                        @foreach($permission1->sons as $permission2)
+                        @foreach($permissions->where('pre_permission_id', $permission1['id']) as $permission2)
                         <div class="form-group">
                           <label class="col-sm-2 control-label col-lg-2" >
                           <h4 style="margin: 0px;padding-left: 13px;">
@@ -41,7 +41,7 @@
                           </label>
                           <div class="col-sm-10">
                             <div class="row">
-                          @foreach($permission2->sons as $permission3)
+                          @foreach($permissions->where('pre_permission_id', $permission2['id']) as $permission3)
                             <div class="col-sm-3">
                               <div class="checkbox">
                                   <label>

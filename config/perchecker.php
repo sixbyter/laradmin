@@ -12,6 +12,8 @@ return [
 
     'route_model'        => \Sixbyte\Perchecker\Models\Route::class,
 
+    'user_model'         => \App\User::class,
+
     /*
      * Forbidden callback
      */
@@ -37,5 +39,10 @@ return [
      * Super User role name
      */
     'superuser_role'     => 'superuser',
+
+    /**
+     * The number of permissions in system
+     */
+    'permissions_count'  => 300,
 
 ];

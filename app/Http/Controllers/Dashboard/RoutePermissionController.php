@@ -33,14 +33,14 @@ class RoutePermissionController extends DashboardController
         if (empty($current_route)) {
             abort(404);
         }
-        $action       = route('dashboard.route-permission.update', $current_route['id']);
-        $permissions1 = Perchecker::getPermissionModel()->where('pre_permission_id', 0)->get();
-        return view('dashboard.route-permission.modify', compact('action', 'current_route', 'title', 'permissions1'));
+        $action      = route('dashboard.route-permission.update', $current_route['id']);
+        $permissions = Perchecker::getAllPermissions();
+        return view('dashboard.route-permission.modify', compact('action', 'current_route', 'title', 'permissions'));
     }
 
     public function index()
     {
-        $routes = Perchecker::getRouteModel()->orderBy('id', 'asc')->paginate(150);
+        $routes = Perchecker::getRouteModel()->with('permission')->orderBy('id', 'asc')->paginate(150);
 
         return view('dashboard.route-permission.index', compact('routes'));
     }
