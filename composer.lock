@@ -948,16 +948,16 @@
         },
         {
             "name": "sixbyte/perchecker",
-            "version": "v0.2.2",
+            "version": "v0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sixbyter/perchecker.git",
-                "reference": "56257b02b91ee6926ce5fd532572619eedffea4e"
+                "reference": "9a23364ab648ba960b7da242730fedd29deec684"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sixbyter/perchecker/zipball/56257b02b91ee6926ce5fd532572619eedffea4e",
-                "reference": "56257b02b91ee6926ce5fd532572619eedffea4e",
+                "url": "https://api.github.com/repos/sixbyter/perchecker/zipball/9a23364ab648ba960b7da242730fedd29deec684",
+                "reference": "9a23364ab648ba960b7da242730fedd29deec684",
                 "shasum": ""
             },
             "require": {
@@ -985,7 +985,7 @@
                 }
             ],
             "description": "Routes & Roles & Permissions for Laravel 5",
-            "time": "2015-11-20 02:59:03"
+            "time": "2015-11-23 03:54:22"
         },
         {
             "name": "swiftmailer/swiftmailer",
