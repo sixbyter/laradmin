@@ -63,7 +63,7 @@ class UserController extends DashboardController
         $user->email    = $request->input('email');
         $user->password = bcrypt($request->input('password'));
         $user->save();
-        $user->roles()->sync($request->input('roles_id'));
+        $user->roles()->sync($request->input('roles_id',[]));
         return redirect()
             ->route('dashboard.user.index')
             ->with('infos', new MessageBag(["新增用户" . $user['name']]));
@@ -86,7 +86,7 @@ class UserController extends DashboardController
         $user->email    = $request->input('email');
         $user->password = bcrypt($request->input('password'));
         $user->save();
-        $user->roles()->sync($request->input('roles_id'));
+        $user->roles()->sync($request->input('roles_id',[]));
         return redirect()
             ->route('dashboard.user.edit', $userid)
             ->with('infos', new MessageBag(["修改用户信息成功."]));

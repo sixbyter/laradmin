@@ -30,7 +30,7 @@ Route::group(['middleware' => [
         'password' => 'Auth\PasswordController',
     ]);
 
-    Route::group(['namespace' => 'Dashboard', 'prefix' => 'dashboard', 'middleware' => ['auth', 'perchecker']], function () {
+    Route::group(['namespace' => 'Dashboard', 'prefix' => 'dashboard'], function () {
 
         Route::get('/', function () {
             return redirect()->route('dashboard.welcome');

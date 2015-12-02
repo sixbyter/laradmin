@@ -12,6 +12,47 @@
           </header>
           <div class="panel-body">
               laradmin
+              @percheckcan("app.add")
+              @endpercheckcan
+              @percheckcan("app.group")
+              @endpercheckcan
+              @percheckcan("app.edit")
+              @endpercheckcan
+              @percheckcan("app.index")
+              @endpercheckcan
+              @percheckcan("banner")
+              @endpercheckcan
+              @percheckcan("app.add")
+              @endpercheckcan
+              @percheckcan("app.group")
+              @endpercheckcan
+              @percheckcan("app.edit")
+              @endpercheckcan
+              @percheckcan("app.index")
+              @endpercheckcan
+              @percheckcan("banner")
+              @endpercheckcan
+
+              @percheckcan("app.add")
+              @endpercheckcan
+              @percheckcan("app.group")
+              @endpercheckcan
+              @percheckcan("app.edit")
+              @endpercheckcan
+              @percheckcan("app.index")
+              @endpercheckcan
+              @percheckcan("banner")
+              @endpercheckcan
+              @percheckcan("app.add")
+              @endpercheckcan
+              @percheckcan("app.group")
+              @endpercheckcan
+              @percheckcan("app.edit")
+              @endpercheckcan
+              @percheckcan("app.index")
+              @endpercheckcan
+              @percheckcan("banner")
+              @endpercheckcan
           </div>
       </section>
   </div>
