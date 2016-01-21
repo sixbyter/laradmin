@@ -54,7 +54,7 @@ class UserController extends DashboardController
         $user  = new User;
         $rules = [
             'name'     => 'required',
-            'email'    => 'required|email',
+            'email'    => 'required|email|unique:users',
             'roles_id' => 'array',
             'password' => 'required|min:6|confirmed',
         ];
